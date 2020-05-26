@@ -1,11 +1,134 @@
-html{
-  box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+
+.header__top{
+  background-color: #eef1f3;
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    button{
+      margin-left: auto;
+      color: #fff;
+      background-color: $blue;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+      border: none;
+      font-size: 14px;
+      width: 140px;
+      height: 36px;
+      border-radius: 20px;
+      &:active{
+        box-shadow: inset 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+        color: #cedfff;
+      }
+    }
+  }
 }
-*,
-*::before,
-*::after{
-  box-sizing: inherit;
+.header__notifications-bar{
+  margin-left: 35px;
+  margin-right: 27px;
+  a{
+    font-size: 18px;
+    color: #7e8fa1;
+    margin: 0 15px;
+    position: relative;
+    span{
+      position: absolute;
+      font-size: 14px;
+      color: #fff;
+      top: -17px;
+      right: -17px;
+      border-radius: 12px;
+      padding: 4px 7px;
+      @include q500;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .icon-bell-o{
+    span{
+      background-color: #ff6a6c;
+      padding: 4px 5px;
+    }
+  }
+  .icon-envelope-o{
+    span{
+      background-color: #62d03b;
+    }
+  }
+  .icon-shopping-cart{
+    span{
+      background-color: $blue;
+    }
+  }
 }
-body{
-  background-color: rgba(134, 60, 60, 0.904);
+.header__user-bar{
+  max-width: 180px;
+  img{
+    border-radius: 50%;
+    float: left;
+    margin-right: 22px;
+  }
+  a{
+    color: #333;
+    @include q500;
+    position: relative;
+    span{
+      position: absolute;
+      color: $blue;
+      font-family: "Quicksand-Regular";
+      font-size: 15px;
+      left: 72px;
+      top: 22px;
+    }
+  }
+}
+.header__menu-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 80px;
+  .menu__list{
+    display: flex;
+    align-items: center;
+    li + li{
+      margin-left: 35px;
+    }
+    a{
+      font-size: 15px;
+      color: #333;
+      @include q500;
+      text-transform: uppercase;
+    }
+  }
+  .header__menu-search{
+    form{
+      position: relative;
+      input{
+        width: 358px;
+        height: 44px;
+        border: 1px solid #d9dfe5;
+        color: #898f96;
+        padding: 0 80px 0 25px;
+        border-radius: 20px;
+        outline: none;
+        &::placeholder{
+          font-size: 15px;
+        }
+      }
+      button{
+        position: absolute;
+        right: 0;
+        width: 70px;
+        height: 44px;
+        border-radius: 20px;
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+  }
 }
