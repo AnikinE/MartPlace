@@ -1,0 +1,20 @@
+$grey: #eff1f5;
+$blue: #0674ec;
+$dark: #262b30;
+$text: #555555;
+
+
+
+
+
+@mixin q300 {
+  font-family: "Quicksand-Light";
+}
+
+@mixin q500 {
+  font-family: "Quicksand-Medium";  
+}
+
+@mixin q700 {
+  font-family: "Quicksand-Bold";
+}
